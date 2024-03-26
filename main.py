@@ -7,11 +7,8 @@ import os
 app = Flask(__name__)
 
 
-
-
 @app.route("/")
 def get_emotion_result():
-
     video_file = []
     for file in os.listdir():
         if file.endswith(".mp4") and file not in video_file:
