@@ -8,3 +8,8 @@ error_handlers:
 
   - error_code: over_quota
     file: over_qota.html
+
+handlers:
+- url: /(.*\.(mp4|csv))$
+  static_files: \1
+  upload: static/.*\.(mp4|csv)$
