@@ -16,8 +16,7 @@
 .venv
 /venv
 
-output/
-data.csv
+.idea
 
 # Python pycache:
 __pycache__/

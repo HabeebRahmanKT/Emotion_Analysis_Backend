@@ -18,11 +18,8 @@ def get_emotion_result():
             path_to_video = file
             video = Video(path_to_video)
 
-            result = video.analyze(emotion_detector, save_frames=False, save_video=False, frequency=8)
-
-            # Create Pandas DataFrame with emotion data
-            emotions_df = video.to_pandas(result)
-            print(emotions_df)
+            result = video.analyze(emotion_detector, save_video=False, frequency=8,
+                                   annotate_frames=False)
 
             emotion_result = {'angry0': 0.0, 'happy0': 0.0, 'sad0': 0.0, 'neutral0': 0.0, 'fear0': 0.0}
             for frames in result:
